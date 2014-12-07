@@ -18,7 +18,11 @@ module NOC_I_06_d {
             p.background(0);
             p.noStroke();
 
+            // Optional: adjust noise detail here
+            p.noiseDetail(8, 0.65);
+
             p.loadPixels();
+            // For every x,y coordinate in a 2D space, calculate a noise value and produce a brightness value
             // Start xoff at 0.
             xOff = 0;
             for (var x: number = 0; x < p.width; x++) {

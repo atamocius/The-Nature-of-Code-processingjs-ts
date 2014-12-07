@@ -1,35 +1,52 @@
-/// <reference path="../../scripts/typings/processing.d.ts" />
+﻿/// <reference path="../../scripts/typings/processing.d.ts" />
+
 /* tslint:disable: no-unused-variable */
 /* tslint:disable: comment-format */
-var NOC_I_06_d;
-(function (NOC_I_06_d) {
+
+module NOC_I_06_e {
     'use strict';
-    NOC_I_06_d.sketch = function (p) {
-        var xOff = 0;
-        var yOff = 0;
-        var xIncrement = 0.01;
-        var yIncrement = 0.01;
-        p.setup = function () {
-            p.size(640, 360);
+
+    export var sketch = function (p: any): void {
+
+        var xOff: number = 0;
+        var yOff: number = 0;
+        var zOff: number = 0; // The noise function's 3rd argument, a global variable that increments once per cycle
+        var xIncrement: number = 0.01;
+        var yIncrement: number = 0.01;
+        var zIncrement: number = 0.02;
+
+        p.setup = () => {
+            p.size(200, 200);
             p.background(0);
             p.noStroke();
+
+            // Since the frametakes a lot longer to process, might as well
+            // cap the framerate
+            p.frameRate(1);
+        };
+
+        p.draw = () => {
+            p.background(0);
+
             // Optional: adjust noise detail here
-            p.noiseDetail(8, 0.65);
+            //p.noiseDetail(8, 0.65);
+
             p.loadPixels();
             // For every x,y coordinate in a 2D space, calculate a noise value and produce a brightness value
             // Start xoff at 0.
             xOff = 0;
-            for (var x = 0; x < p.width; x++) {
+            for (var x: number = 0; x < p.width; x++) {
                 // For every xoff, start yoff at 0.
                 yOff = 0;
-                for (var y = 0; y < p.height; y++) {
+                for (var y: number = 0; y < p.height; y++) {
                     // Use xoff and yoff for noise().
                     //var bright: number = p.random(0, 255);
-                    var bright = p.map(p.noise(xOff, yOff), 0, 1, 0, 255);
+                    var bright: number = p.map(p.noise(xOff, yOff, zOff), 0, 1, 0, 255);
                     // Use x and y for pixel location.
                     var c = p.color(bright);
                     //p.set(x, y, c);
                     p.pixels.setPixel(y * p.width + x, c);
+
                     // Increment yoff.
                     yOff += yIncrement;
                 }
@@ -37,12 +54,12 @@ var NOC_I_06_d;
                 xOff += xIncrement;
             }
             p.updatePixels();
-        };
-        p.draw = function () {
-            return;
+
+            zOff += zIncrement;
         };
     };
-})(NOC_I_06_d || (NOC_I_06_d = {}));
+
+}
+
 var canvas = document.getElementById('canvas1');
-var processingInstance = new Processing(canvas, NOC_I_06_d.sketch);
-//# sourceMappingURL=Sketch.js.map
+var processingInstance = new Processing(canvas, NOC_I_06_e.sketch);

@@ -19,6 +19,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="Introduction\Exercise_I_10_NoiseLandscape\index.html" />
+    <Content Include="Introduction\NOC_I_06_e_Noise3D\index.html" />
     <Content Include="Introduction\NOC_I_06_d_Noise2D\index.html" />
     <Content Include="Introduction\NOC_I_06_c_Noise1D\index.html" />
     <Content Include="Introduction\NOC_I_06_b_RandomWalkNoiseStep\index.html" />
@@ -50,6 +52,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Introduction\Exercise_I_10_NoiseLandscape\Sketch.ts" />
+    <TypeScriptCompile Include="Introduction\NOC_I_06_e_Noise3D\Sketch.ts" />
     <TypeScriptCompile Include="Introduction\NOC_I_06_d_Noise2D\Sketch.ts" />
     <TypeScriptCompile Include="Introduction\NOC_I_06_c_Noise1D\Sketch.ts" />
     <TypeScriptCompile Include="Introduction\NOC_I_06_b_RandomWalkNoiseStep\Sketch.ts" />

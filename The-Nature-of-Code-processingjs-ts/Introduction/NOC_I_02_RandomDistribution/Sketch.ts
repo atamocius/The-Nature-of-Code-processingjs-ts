@@ -14,9 +14,9 @@ module NOC_I_02 {
         p.setup = () => {
             p.size(640, 240);
 
-            randomCounts = new Array<number>(20);
+            randomCounts = [];
             // Initialize array values to 0
-            for (var i: number = 0; i < randomCounts.length; i++) {
+            for (var i: number = 0; i < 20; i++) {
                 randomCounts[i] = 0;
             }
         };

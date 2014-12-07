@@ -9,8 +9,8 @@ var NOC_I_02;
         var randomCounts;
         p.setup = function () {
             p.size(640, 240);
-            randomCounts = new Array(20);
-            for (var i = 0; i < randomCounts.length; i++) {
+            randomCounts = [];
+            for (var i = 0; i < 20; i++) {
                 randomCounts[i] = 0;
             }
         };

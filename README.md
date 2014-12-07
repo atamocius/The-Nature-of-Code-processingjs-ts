@@ -3,19 +3,15 @@ The-Nature-of-Code-processingjs-ts
 
 Port of *Nature of Code* examples to TypeScript using Processing.js.
 
-The aim of this port is to show a simple and concise usage of TypeScript with Processing.js. There is no overly complicated definition file and no complicated wrapping of Processing.js objects.
+The aim of this port is to show a simple and concise usage of TypeScript with Processing.js. There is no overly complicated definition file and no complicated wrapping of Processing.js objects. Essentially using TypeScript directly on top of Processing.js.
 
 All codes are in TypeScript using the Processing.js JavaScript API.
 
 Notes:
 -----
-- As of now, the definition file `processing.d.ts` only contains a single ambient declaration to satisfy TypeScript's static check:
+- As of now, the definition file `processing.d.ts` declares the objects as interfaces but pretty much all member properties and methods are just declared as `any`.
 
-    ```typescript
-    declare var Processing: any;
-    ```
-
-    *This is still a WIP and is subject to change (ie. I may write a more descriptive definition file as time permits).*
+    *This is still a WIP and is subject to change (ie. I'll write the complete the method signatures once the Processing.js reference documentation becomes more mature and clearer. I attempted to write a complete definition but I was frustrated by the number of inconsistencies in the documentation. I'll probably just work on it as I go along).*
 
 - I am currently reading the book and will port the codes as I encounter them.
 

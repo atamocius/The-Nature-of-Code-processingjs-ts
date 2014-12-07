@@ -6,16 +6,16 @@
 module NOC_1_2_bouncingball_vectors {
     'use strict';
 
-    export var sketch = function (p: any): void {
+    export var sketch = function (p: Processing): void {
 
-        var location: any; // PVector
-        var velocity: any; // PVector
+        var location: PVector;
+        var velocity: PVector;
 
         p.setup = () => {
             p.size(200, 200);
             p.background(255);
-            location = new p.PVector(100, 100);
-            velocity = new p.PVector(2.5, 5);
+            location = new PVector(100, 100);
+            velocity = new PVector(2.5, 5);
         };
 
         p.draw = () => {

@@ -46,6 +46,9 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\processing\processing.min.js.map">
+      <DependentUpon>processing.min.js</DependentUpon>
+    </Content>
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

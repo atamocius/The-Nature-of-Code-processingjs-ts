@@ -74,7 +74,9 @@
     <TypeScriptCompile Include="Tests\Test2\Sketch.ts" />
     <TypeScriptCompile Include="Tests\Test1\Sketch.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Chp1_Vectors\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

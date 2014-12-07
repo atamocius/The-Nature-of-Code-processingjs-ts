@@ -18,6 +18,7 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_1_bouncingball_novectors\index.html" />
     <Content Include="index.html" />
     <Content Include="Introduction\Exercise_I_10_NoiseLandscape\index.html" />
@@ -53,6 +54,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_1_bouncingball_novectors\Sketch.ts" />
     <TypeScriptCompile Include="Introduction\Exercise_I_10_NoiseLandscape\Landscape.ts" />
     <TypeScriptCompile Include="Introduction\Exercise_I_10_NoiseLandscape\Sketch.ts" />

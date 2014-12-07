@@ -15,7 +15,7 @@ Notes:
     declare var Processing: any;
     ```
 
-    *This is still a **WIP** and is subject to change (ie. I may write a more descriptive definition file as time permits).*
+    *This is still a **_WIP_** and is subject to change (ie. I may write a more descriptive definition file as time permits).*
 
 - I am currently reading the book and will port the codes as I encounter them.
 

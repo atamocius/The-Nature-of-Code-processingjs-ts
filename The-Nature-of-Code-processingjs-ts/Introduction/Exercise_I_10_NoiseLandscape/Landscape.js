@@ -14,9 +14,9 @@ var Exercise_I_10_NoiseLandscape;
             this.h = h;
             this.cols = w / scl;
             this.rows = h / scl;
-            this.z = this.initializeArray2D(this.z, this.cols, this.rows, 0);
+            this.z = this.initializeArray(this.z, this.cols, this.rows, 0);
         }
-        Landscape.prototype.initializeArray2D = function (arr, cols, rows, initValue) {
+        Landscape.prototype.initializeArray = function (arr, cols, rows, initValue) {
             arr = [];
             for (var i = 0; i < cols; i++) {
                 arr.push([]);

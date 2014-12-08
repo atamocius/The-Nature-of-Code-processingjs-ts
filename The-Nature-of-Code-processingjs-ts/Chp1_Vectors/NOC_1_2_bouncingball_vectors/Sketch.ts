@@ -6,7 +6,7 @@
 module NOC_1_2_bouncingball_vectors {
     'use strict';
 
-    export var sketch = function (p: Processing): void {
+    export var sketch = (p: Processing) => {
 
         var location: PVector;
         var velocity: PVector;

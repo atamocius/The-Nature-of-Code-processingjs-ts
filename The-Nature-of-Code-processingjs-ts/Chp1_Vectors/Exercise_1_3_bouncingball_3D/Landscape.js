@@ -1,79 +1,48 @@
-﻿/// <reference path="../../scripts/typings/processing.d.ts" />
-
+/// <reference path="../../scripts/typings/processing.d.ts" />
 /* tslint:disable: no-unused-variable */
 /* tslint:disable: comment-format */
-
-module Exercise_I_10_NoiseLandscape {
+var Exercise_I_10_NoiseLandscape;
+(function (Exercise_I_10_NoiseLandscape) {
     'use strict';
-
-    export class Landscape {
-        // processing object
-        private p: Processing;
-        // size of each cell
-        private scl: number;
-        // width and height of thingie
-        private w: number;
-        private h: number;
-        // number of rows and columns
-        private rows: number;
-        private cols: number;
-        // perlin noise argument
-        private zoff: number = 0.0;
-        // using an array to store all the height values 
-        private z: number[][];
-
-        constructor(p: Processing, scl: number, w: number, h: number) {
+    var Landscape = (function () {
+        function Landscape(p, scl, w, h) {
+            // perlin noise argument
+            this.zoff = 0.0;
             this.p = p;
-
             this.scl = scl;
             this.w = w;
             this.h = h;
             this.cols = w / scl;
             this.rows = h / scl;
-
-            this.z = this.initializeArray(this.z, this.cols, this.rows, 0);
+            this.z = this.initializeArray2D(this.z, this.cols, this.rows, 0);
         }
-
-        private initializeArray<T>(arr: T[][], cols: number, rows: number, initValue: T): T[][] {
+        Landscape.prototype.initializeArray2D = function (arr, cols, rows, initValue) {
             arr = [];
-
-            for (var i: number = 0; i < cols; i++) {
+            for (var i = 0; i < cols; i++) {
                 arr.push([]);
-                for (var j: number = 0; j < rows; j++) {
+                for (var j = 0; j < rows; j++) {
                     arr[i][j] = initValue;
                 }
             }
-
             return arr;
-        }
-
+        };
         // Calculate height values (based off a neural netork)
-        public calculate(): void {
-            var xoff: number = 0;
-
-            for (var i: number = 0; i < this.cols; i++) {
-
-                var yoff: number = 0;
-
-                for (var j: number = 0; j < this.rows; j++) {
-
+        Landscape.prototype.calculate = function () {
+            var xoff = 0;
+            for (var i = 0; i < this.cols; i++) {
+                var yoff = 0;
+                for (var j = 0; j < this.rows; j++) {
                     this.z[i][j] = this.p.map(this.p.noise(xoff, yoff, this.zoff), 0, 1, -120, 120);
                     yoff += 0.1;
-
                 }
-
                 xoff += 0.1;
             }
-
             this.zoff += 0.01;
-        }
-
+        };
         // Render landscape as grid of quads
-        public render(): void {
-            // Every cell is an individual quad
-            // (could use quad_strip here, but produces funny results, investigate this)
-            for (var x: number = 0; x < this.z.length - 1; x++) {
-                for (var y: number = 0; y < this.z[x].length - 1; y++) {
+        Landscape.prototype.render = function () {
+            for (var x = 0; x < this.z.length - 1; x++) {
+                for (var y = 0; y < this.z[x].length - 1; y++) {
                     // one quad at a time
                     // each quad's color is determined by the height value at each vertex
                     // (clean this part up)
@@ -90,6 +59,9 @@ module Exercise_I_10_NoiseLandscape {
                     this.p.popMatrix();
                 }
             }
-        }
-    }
-}
+        };
+        return Landscape;
+    })();
+    Exercise_I_10_NoiseLandscape.Landscape = Landscape;
+})(Exercise_I_10_NoiseLandscape || (Exercise_I_10_NoiseLandscape = {}));
+//# sourceMappingURL=Landscape.js.map

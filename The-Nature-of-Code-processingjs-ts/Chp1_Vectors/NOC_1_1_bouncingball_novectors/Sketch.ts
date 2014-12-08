@@ -6,7 +6,7 @@
 module NOC_1_1_bouncingball_novectors {
     'use strict';
 
-    export var sketch = function (p: any): void {
+    export var sketch = (p: Processing) => {
 
         var x: number = 100;
         var y: number = 100;

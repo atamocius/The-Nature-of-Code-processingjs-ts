@@ -7,7 +7,7 @@
 module Exercise_I_10_NoiseLandscape {
     'use strict';
 
-    export var sketch = function (p: any): void {
+    export var sketch = (p: Processing) => {
 
         var land: Landscape;
         var theta: number = 0.0;

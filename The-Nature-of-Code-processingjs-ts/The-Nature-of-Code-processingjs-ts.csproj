@@ -19,6 +19,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_6_vector_normalize\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_5_vector_magnitude\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_4_vector_multiplication\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_3_vector_subtraction\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors_object\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_1_bouncingball_novectors\index.html" />
@@ -42,6 +46,8 @@
     <Content Include="Introduction\NOC_I_01_a_RandomWalk\index.html" />
     <Content Include="Scripts\processing\processing.js" />
     <Content Include="Scripts\processing\processing.min.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="Tests\Test3\index.html" />
     <Content Include="Tests\Test2\index.html" />
     <Content Include="Tests\Test1\index.html" />
@@ -51,6 +57,7 @@
     <Content Include="Scripts\processing\processing.min.js.map">
       <DependentUpon>processing.min.js</DependentUpon>
     </Content>
+    <Content Include="packages.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -61,7 +68,14 @@
   <ItemGroup>
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Box.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Ball.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors_object\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_6_vector_normalize\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_6_vector_normalize\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_5_vector_magnitude\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_4_vector_multiplication\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_3_vector_subtraction\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors_object\Ball.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors_object\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors\Sketch.ts" />
@@ -85,6 +99,7 @@
     <TypeScriptCompile Include="Introduction\NOC_I_01_b_RandomWalkImproved\Sketch.ts" />
     <TypeScriptCompile Include="Introduction\NOC_I_01_a_RandomWalk\Sketch.ts" />
     <TypeScriptCompile Include="Scripts\typings\processing.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="Tests\Test3\Sketch.ts" />
     <TypeScriptCompile Include="Tests\Test2\Sketch.ts" />
     <TypeScriptCompile Include="Tests\Test1\Sketch.ts" />
@@ -119,6 +134,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptRemoveComments>true</TypeScriptRemoveComments>

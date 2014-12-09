@@ -97,6 +97,7 @@ interface PFont {
 }
 
 interface Processing {
+    new (canvas: HTMLElement): Processing;
     new (canvas: HTMLElement, sketch: (p: Processing) => void): Processing;
 
     /*

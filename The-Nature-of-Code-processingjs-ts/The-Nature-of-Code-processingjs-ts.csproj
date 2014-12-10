@@ -70,7 +70,12 @@
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Ball.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_1_bouncingball_novectors\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors_object\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_3_vector_subtraction\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_4_vector_multiplication\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_5_vector_magnitude\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_6_vector_normalize\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_6_vector_normalize\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_5_vector_magnitude\Sketch.ts" />

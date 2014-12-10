@@ -1,6 +1,4 @@
 ﻿/// <reference path="../../scripts/typings/processing.d.ts" />
-/// <reference path="ball.ts" />
-/// <reference path="box.ts" />
 
 /* tslint:disable: no-unused-variable */
 /* tslint:disable: comment-format */

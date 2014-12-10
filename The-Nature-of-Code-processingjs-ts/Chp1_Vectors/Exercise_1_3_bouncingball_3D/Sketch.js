@@ -1,6 +1,4 @@
 /// <reference path="../../scripts/typings/processing.d.ts" />
-/// <reference path="ball.ts" />
-/// <reference path="box.ts" />
 define(["require", "exports", 'Ball', 'Box'], function (require, exports, Ball, Box) {
     'use strict';
     exports.sketch = function ($p) {

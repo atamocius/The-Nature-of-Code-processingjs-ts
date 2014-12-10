@@ -1,10 +1,9 @@
 /// <reference path="../../scripts/typings/processing.d.ts" />
 /* tslint:disable: no-unused-variable */
 /* tslint:disable: comment-format */
-var NOC_1_2_bouncingball_vectors;
-(function (NOC_1_2_bouncingball_vectors) {
-    'use strict';
-    NOC_1_2_bouncingball_vectors.sketch = function (p) {
+'use strict';
+define(["require", "exports"], function (require, exports) {
+    exports.sketch = function (p) {
         var location;
         var velocity;
         p.setup = function () {
@@ -37,7 +36,9 @@ var NOC_1_2_bouncingball_vectors;
             p.ellipse(location.x, location.y, 16, 16);
         };
     };
-})(NOC_1_2_bouncingball_vectors || (NOC_1_2_bouncingball_vectors = {}));
-var canvas = document.getElementById('canvas1');
-var processingInstance = new Processing(canvas, NOC_1_2_bouncingball_vectors.sketch);
+    exports.run = function () {
+        var canvas = document.getElementById('canvas1');
+        var processingInstance = new Processing(canvas, exports.sketch);
+    };
+});
 //# sourceMappingURL=Sketch.js.map

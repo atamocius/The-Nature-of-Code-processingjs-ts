@@ -18,7 +18,13 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Chp1_Vectors\Exercise_1_5_motion101_car\index.html" />
     <Content Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_8_motion101_acceleration\index.html" />
+    <Content Include="Chp1_Vectors\NOC_1_7_motion101\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_6_vector_normalize\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_5_vector_magnitude\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_4_vector_multiplication\index.html" />
@@ -66,16 +72,34 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_5_motion101_car\Car.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_5_motion101_car\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_5_motion101_car\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Box.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Ball.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_1_bouncingball_novectors\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_2_bouncingball_vectors_object\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_3_vector_subtraction\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_4_vector_multiplication\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_5_vector_magnitude\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_8_motion101_acceleration\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_8_motion101_acceleration\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_8_motion101_acceleration\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_7_motion101\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_7_motion101\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\NOC_1_7_motion101\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_6_vector_normalize\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_6_vector_normalize\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_5_vector_magnitude\Sketch.ts" />

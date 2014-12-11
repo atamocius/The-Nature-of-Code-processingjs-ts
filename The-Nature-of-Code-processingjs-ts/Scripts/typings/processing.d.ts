@@ -4,39 +4,79 @@
 
 //declare var Processing: any;
 
-// TODO: Create definitions
+// TODO: Create complete definitions
 // http://www.codebelt.com/typescript/how-to-create-a-ambient-class-declarations-in-typescript-tutorial/
+// TODO: Add JSDoc
+// http://blog.icanmakethiswork.io/2014/05/typescript-jsdoc-and-intellisense.html
+// TODO: Add PMatrix interface
+// TODO: Add PConstants interface
+// TODO: Add PMatrix2D, PMatrix3D (implement PMatrix)
+// http://processing.org/reference/javadoc/core/
 
 declare var Processing: Processing;
-declare var PVector: PVector;
+//declare var PVector: PVector;
 declare var PShape: PShape;
 declare var PImage: PImage;
 declare var PGraphics: PGraphics;
 declare var PFont: PFont;
 
-interface PVector {
-    new (): PVector;
-    new (x: number, y: number): PVector;
-    new (x: number, y: number, z: number): PVector;
+declare class PVector {
+    constructor();
+    constructor(x: number, y: number);
+    constructor(x: number, y: number, z: number);
 
     x: number;
     y: number;
     z: number;
 
-    get: any;
-    set: any;
-    mag: any;
-    add: any;
-    sub: any;
-    mult: any;
-    div: any;
-    dist: any;
-    dot: any;
-    cross: any;
-    normalize: any;
-    limit: any;
-    angleBetween: any;
-    array: any;
+    add(x: number, y: number, z: number): void;
+    add(v: PVector): void;
+    static add(v1: PVector, v2: PVector): PVector;
+    static add(v1: PVector, v2: PVector, target: PVector): PVector;
+    angleBetween(v1: PVector, v2: PVector): number;
+    array(): number[];
+    cross(v: PVector): PVector;
+    cross(v: PVector, target: PVector): PVector;
+    static cross(v1: PVector, v2: PVector, target: PVector): PVector;
+    dist(v: PVector): number;
+    static dist(v1: PVector, v2: PVector): number;
+    div(n: number): void;
+    static div(v: PVector, n: number): PVector;
+    static div(v: PVector, n: number, target: PVector): PVector;
+    dot(x: number, y: number, z: number): number;
+    dot(v: PVector): number;
+    static dot(v1: PVector, v2: PVector): number;
+    static fromAngle(angle: number): PVector;
+    static fromAngle(angle: number, target: PVector): PVector;
+    get(target: number[]): number[];
+    heading(): number;
+    lerp(x: number, y: number, z: number, amt: number): void;
+    lerp(v: PVector, amt: number): void;
+    static lerp(v1: PVector, v2: PVector, amt: number): PVector;
+    limit(max: number): void;
+    mag(): number;
+    magSq(): number;
+    mult(n: number): void;
+    static mult(v: PVector, n: number): PVector;
+    static mult(v: PVector, n: number, target: PVector): PVector;
+    normalize(): void;
+    normalize(target: PVector): PVector;
+    static random2D(): PVector;
+    static random2D(target: PVector): PVector;
+    static random3D(): PVector;
+    static random3D(target: PVector): PVector;
+    rotate(theta: number): void;
+    set(source: number[]): void;
+    set(x: number, y: number): void;
+    set(x: number, y: number, z: number): void;
+    set(v: PVector): void;
+    setMag(len: number): void;
+    setMag(target: PVector, len: number): PVector;
+    sub(x: number, y: number, z: number): void;
+    sub(v: PVector): void;
+    static sub(v1: PVector, v2: PVector): PVector;
+    static sub(v1: PVector, v2: PVector, target: PVector): PVector;
+    toString(): string;
 }
 
 interface PShape {

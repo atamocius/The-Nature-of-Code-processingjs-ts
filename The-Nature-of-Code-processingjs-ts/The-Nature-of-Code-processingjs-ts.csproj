@@ -20,8 +20,10 @@
   <ItemGroup>
     <Content Include="Chp1_Vectors\Exercise_1_5_motion101_car\index.html" />
     <Content Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\index.html" />
+    <Content Include="Chp1_Vectors\Exercise_1_8_motion101_acceleration_variable\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\index.html" />
+    <Content Include="Chp1_Vectors\Exercise_1_6_motion101_noise\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_8_motion101_acceleration\index.html" />
     <Content Include="Chp1_Vectors\NOC_1_7_motion101\index.html" />
@@ -79,6 +81,9 @@
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Ball.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_3_bouncingball_3D\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_8_motion101_acceleration_variable\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_8_motion101_acceleration_variable\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_8_motion101_acceleration_variable\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\Mover.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_11_motion101_acceleration_array\Sketch.ts" />
@@ -91,6 +96,9 @@
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\Mover.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_10_motion101_acceleration\Sketch.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_6_motion101_noise\Main.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_6_motion101_noise\Mover.ts" />
+    <TypeScriptCompile Include="Chp1_Vectors\Exercise_1_6_motion101_noise\Sketch.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\Main.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\Mover.ts" />
     <TypeScriptCompile Include="Chp1_Vectors\NOC_1_9_motion101_acceleration\Sketch.ts" />

@@ -29,11 +29,12 @@ declare class PVector {
     y: number;
     z: number;
 
+    add(x: number, y: number): void;
     add(x: number, y: number, z: number): void;
     add(v: PVector): void;
     static add(v1: PVector, v2: PVector): PVector;
     static add(v1: PVector, v2: PVector, target: PVector): PVector;
-    angleBetween(v1: PVector, v2: PVector): number;
+    static angleBetween(v1: PVector, v2: PVector): number;
     array(): number[];
     cross(v: PVector): PVector;
     cross(v: PVector, target: PVector): PVector;
@@ -41,6 +42,7 @@ declare class PVector {
     dist(v: PVector): number;
     static dist(v1: PVector, v2: PVector): number;
     div(n: number): void;
+    div(v: PVector): void;
     static div(v: PVector, n: number): PVector;
     static div(v: PVector, n: number, target: PVector): PVector;
     dot(x: number, y: number, z: number): number;
@@ -57,6 +59,7 @@ declare class PVector {
     mag(): number;
     magSq(): number;
     mult(n: number): void;
+    mult(v: PVector): void;
     static mult(v: PVector, n: number): PVector;
     static mult(v: PVector, n: number, target: PVector): PVector;
     normalize(): void;

@@ -1,25 +1,18 @@
 /// <reference path="../../scripts/typings/processing.d.ts" />
-define(["require", "exports", 'Car'], function (require, exports, Car) {
+define(["require", "exports", 'Mover'], function (require, exports, Mover) {
     'use strict';
     exports.sketch = function ($p) {
-        var car;
+        var mover;
         $p.setup = function () {
             $p.size(640, 360);
-            car = new Car($p);
+            mover = new Mover($p);
         };
         $p.draw = function () {
             $p.background(255);
-            car.update();
-            car.checkEdges();
-            car.display();
-        };
-        $p.keyPressed = function () {
-            if ($p.keyCode === $p.UP) {
-                car.accelerate();
-            }
-            else if ($p.keyCode === $p.DOWN) {
-                car.decelerate();
-            }
+            // Update the location
+            mover.update();
+            // Display the Mover
+            mover.display();
         };
     };
     exports.run = function () {

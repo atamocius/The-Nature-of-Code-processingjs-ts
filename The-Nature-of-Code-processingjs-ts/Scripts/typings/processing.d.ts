@@ -13,7 +13,7 @@
 // TODO: Add PMatrix2D, PMatrix3D (implement PMatrix)
 // http://processing.org/reference/javadoc/core/
 
-declare var Processing: Processing;
+//declare var Processing: Processing;
 //declare var PVector: PVector;
 declare var PShape: PShape;
 declare var PImage: PImage;
@@ -139,9 +139,303 @@ interface PFont {
     PFont_list: any;
 }
 
-interface Processing {
-    new (canvas: HTMLElement): Processing;
-    new (canvas: HTMLElement, sketch: (p: Processing) => void): Processing;
+interface PConstants {
+    X: number;
+    Y: number;
+    Z: number;
+
+    R: number;
+    G: number;
+    B: number;
+    A: number;
+
+    U: number;
+    V: number;
+
+    NX: number;
+    NY: number;
+    NZ: number;
+
+    EDGE: number;
+
+    // Stroke
+    SR: number;
+    SG: number;
+    SB: number;
+    SA: number;
+
+    SW: number;
+
+    // Transformations (2D and 3D)
+    TX: number;
+    TY: number;
+    TZ: number;
+
+    VX: number;
+    VY: number;
+    VZ: number;
+    VW: number;
+
+    // Material properties
+    AR: number;
+    AG: number;
+    AB: number;
+
+    DR: number;
+    DG: number;
+    DB: number;
+    DA: number;
+
+    SPR: number;
+    SPG: number;
+    SPB: number;
+
+    SHINE: number;
+
+    ER: number;
+    EG: number;
+    EB: number;
+
+    BEEN_LIT: number;
+
+    VERTEX_FIELD_COUNT: number;
+
+    // Renderers
+    P2D: number;
+    JAVA2D: number;
+    WEBGL: number;
+    P3D: number;
+    OPENGL: number;
+    PDF: number;
+    DXF: number;
+
+    // Platform IDs
+    OTHER: number;
+    WINDOWS: number;
+    MAXOSX: number;
+    LINUX: number;
+
+    EPSILON: number;
+
+    MAX_FLOAT: number;
+    MIN_FLOAT: number;
+    MAX_INT: number;
+    MIN_INT: number;
+
+    PI: number;
+    TWO_PI: number;
+    TAU: number;
+    HALF_PI: number;
+    THIRD_PI: number;
+    QUARTER_PI: number;
+
+    DEG_TO_RAD: number;
+    RAD_TO_DEG: number;
+
+    WHITESPACE: string;
+
+    // Color modes
+    RGB: number;
+    ARGB: number;
+    HSB: number;
+    ALPHA: number;
+    CMYK: number;
+
+    // Image file types
+    TIFF: number;
+    TARGA: number;
+    JPEG: number;
+    GIF: number;
+
+    // Filter/convert types
+    BLUR: number;
+    GRAY: number;
+    INVERT: number;
+    OPAQUE: number;
+    POSTERIZE: number;
+    THRESHOLD: number;
+    ERODE: number;
+    DILATE: number;
+
+    // Blend modes
+    REPLACE: number;
+    BLEND: number;
+    ADD: number;
+    SUBTRACT: number;
+    LIGHTEST: number;
+    DARKEST: number;
+    DIFFERENCE: number;
+    EXCLUSION: number;
+    MULTIPLY: number;
+    SCREEN: number;
+    OVERLAY: number;
+    HARD_LIGHT: number;
+    SOFT_LIGHT: number;
+    DODGE: number;
+    BURN: number;
+
+    // Color component bit masks
+    ALPHA_MASK: number;
+    RED_MASK: number;
+    GREEN_MASK: number;
+    BLUE_MASK: number;
+
+    // Projection matrices
+    CUSTOM: number;
+    ORTHOGRAPHIC: number;
+    PERSPECTIVE: number;
+
+    // Shapes
+    POINT: number;
+    POINTS: number;
+    LINE: number;
+    LINES: number;
+    TRIANGLE: number;
+    TRIANGLES: number;
+    TRIANGLE_STRIP: number;
+    TRIANGLE_FAN: number;
+    QUAD: number;
+    QUADS: number;
+    QUAD_STRIP: number;
+    POLYGON: number;
+    PATH: number;
+    RECT: number;
+    ELLIPSE: number;
+    ARC: number;
+    SPHERE: number;
+    BOX: number;
+
+    GROUP: number;
+    PRIMITIVE: number;
+    //PATH:         number; // shared with Shape PATH
+    GEOMETRY: number;
+
+    // Shape Vertex
+    VERTEX: number;
+    BEZIER_VERTEX: number;
+    CURVE_VERTEX: number;
+    BREAK: number;
+    CLOSESHAPE: number;
+
+    // Shape closing modes
+    OPEN: number;
+    CLOSE: number;
+
+    // Shape drawing modes
+    CORNER: number; // Draw mode convention to use (x, y) to (width, height)
+    CORNERS: number; // Draw mode convention to use (x1, y1) to (x2, y2) coordinates
+    RADIUS: number; // Draw mode from the center, and using the radius
+    CENTER_RADIUS: number; // Deprecated! Use RADIUS instead
+    CENTER: number; // Draw from the center, using second pair of values as the diameter
+    DIAMETER: number; // Synonym for the CENTER constant. Draw from the center
+    CENTER_DIAMETER: number; // Deprecated! Use DIAMETER instead
+
+    // Text vertical alignment modes
+    BASELINE: number;   // Default vertical alignment for text placement
+    TOP: number; // Align text to the top
+    BOTTOM: number; // Align text from the bottom, using the baseline
+
+    // UV Texture coordinate modes
+    NORMAL: number;
+    NORMALIZED: number;
+    IMAGE: number;
+
+    // Text placement modes
+    MODEL: number;
+    SHAPE: number;
+
+    // Stroke modes
+    SQUARE: string;
+    ROUND: string;
+    PROJECT: string;
+    MITER: string;
+    BEVEL: string;
+
+    // Lighting modes
+    AMBIENT: number;
+    DIRECTIONAL: number;
+    //POINT:     number; Shared with Shape constant
+    SPOT: number;
+
+    // Key constants
+
+    // Both key and keyCode will be equal to these values
+    BACKSPACE: number;
+    TAB: number;
+    ENTER: number;
+    RETURN: number;
+    ESC: number;
+    DELETE: number;
+    CODED: number;
+
+    // p.key will be CODED and p.keyCode will be this value
+    SHIFT: number;
+    CONTROL: number;
+    ALT: number;
+    CAPSLK: number;
+    PGUP: number;
+    PGDN: number;
+    END: number;
+    HOME: number;
+    LEFT: number;
+    UP: number;
+    RIGHT: number;
+    DOWN: number;
+    F1: number;
+    F2: number;
+    F3: number;
+    F4: number;
+    F5: number;
+    F6: number;
+    F7: number;
+    F8: number;
+    F9: number;
+    F10: number;
+    F11: number;
+    F12: number;
+    NUMLK: number;
+    META: number;
+    INSERT: number;
+
+    // Cursor types
+    ARROW: string;
+    CROSS: string;
+    HAND: string;
+    MOVE: string;
+    TEXT: string;
+    WAIT: string;
+    NOCURSOR: string;
+
+    // Hints
+    DISABLE_OPENGL_2X_SMOOTH: number;
+    ENABLE_OPENGL_2X_SMOOTH: number;
+    ENABLE_OPENGL_4X_SMOOTH: number;
+    ENABLE_NATIVE_FONTS: number;
+    DISABLE_DEPTH_TEST: number;
+    ENABLE_DEPTH_TEST: number;
+    ENABLE_DEPTH_SORT: number;
+    DISABLE_DEPTH_SORT: number;
+    DISABLE_OPENGL_ERROR_REPORT: number;
+    ENABLE_OPENGL_ERROR_REPORT: number;
+    ENABLE_ACCURATE_TEXTURES: number;
+    DISABLE_ACCURATE_TEXTURES: number;
+    HINT_COUNT: number;
+
+    // PJS defined constants
+    SINCOS_LENGTH: number;       // every half degree
+    PRECISIONB: number;        // fixed point precision is limited to 15 bits!!
+    PRECISIONF: number;
+    PREC_MAXVAL: number;
+    PREC_ALPHA_SHIFT: number;
+    PREC_RED_SHIFT: number;
+    NORMAL_MODE_AUTO: number;
+    NORMAL_MODE_SHAPE: number;
+    NORMAL_MODE_VERTEX: number;
+    MAX_LIGHTS: number;}
+
+declare class Processing implements PConstants {
+    constructor(canvas: HTMLElement);
+    constructor(canvas: HTMLElement, sketch: (p: Processing) => void);
 
     /*
      * Constants
@@ -442,40 +736,47 @@ interface Processing {
     /*
      * Structure
      */
-    draw: any;
-    exit: any;
-    loop: any;
-    noLoop: any;
-    pushStyle: any;
-    popStyle: any;
-    redraw: any;
-    setup: any;
-    size: any;
+    draw(): void;
+    exit(): void;
+    loop(): void;
+    noLoop(): void;
+    pushStyle(): void;
+    popStyle(): void;
+    redraw(): void;
+    setup(): void;
+    size(width: number, height: number, mode?: number): void;
 
     /*
      * Environment
      */
-    cursor: any;
-    focused: any;
-    frameCount: any;
-    frameRate: any;
+    cursor(): void;
+    cursor(mode: number): void;
+    cursor(image: PImage, x: number, y: number): void;
+    focused: boolean;
+    frameCount: number;
+    frameRate(fps: number): void;
+    //frameRate: number;
     //frameRate: any;
-    height: any;
-    noCursor: any;
-    online: any;
-    screen: any;
-    width: any;
+    height: number;
+    noCursor(): void;
+    online: boolean;
+    //screen: any;
+    width: number;
 
     /*
      * Shape - 2D Primitives
      */
-    arc: any;
-    ellipse: any;
-    line: any;
-    point: any;
-    quad: any;
-    rect: any;
-    triangle: any;
+    arc(x: number, y: number, width: number, height: number, start: number, stop: number): void;
+    ellipse(x: number, y: number, width: number, height: number): void;
+    line(x1: number, y1: number, x2: number, y2: number): void;
+    line(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number): void;
+    point(x: number, y: number): void;
+    point(x: number, y: number, z: number): void;
+    quad(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number): any;
+    rect(x: number, y: number, width: number, height: number): void;
+    rect(x: number, y: number, width: number, height: number, radius: number): void;
+    rect(x: number, y: number, width: number, height: number, tlradius: number, trradius: number, brradius: number, blradius: number): void;
+    triangle(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number): void;
 
     /*
      * Shape - Curves

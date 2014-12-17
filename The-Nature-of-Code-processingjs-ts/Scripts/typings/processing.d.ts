@@ -50,6 +50,7 @@ declare class PVector {
     static dot(v1: PVector, v2: PVector): number;
     static fromAngle(angle: number): PVector;
     static fromAngle(angle: number, target: PVector): PVector;
+    get(): PVector;
     get(target: number[]): number[];
     heading(): number;
     lerp(x: number, y: number, z: number, amt: number): void;
@@ -750,13 +751,12 @@ declare class Processing implements PConstants {
      * Environment
      */
     cursor(): void;
-    cursor(mode: number): void;
+    cursor(mode: string): void;
     cursor(image: PImage, x: number, y: number): void;
     focused: boolean;
     frameCount: number;
+    __frameRate: number;
     frameRate(fps: number): void;
-    //frameRate: number;
-    //frameRate: any;
     height: number;
     noCursor(): void;
     online: boolean;
@@ -781,44 +781,54 @@ declare class Processing implements PConstants {
     /*
      * Shape - Curves
      */
-    bezier: any;
-    bezierDetail: any;
-    bezierPoint: any;
-    bezierTangent: any;
-    curve: any;
-    curveDetail: any;
-    curvePoint: any;
-    curveTangent: any;
-    curveTightness: any;
+    bezier(x1: number, y1: number, cx1: number, cy1: number, cx2: number, cy2: number, x2: number, y2: number): void;
+    bezier(x1: number, y1: number, z1: number, cx1: number, cy1: number, cz1: number, cx2: number, cy2: number, cz2: number, x2: number, y2: number, z2: number): void;
+    bezierDetail(detail: number): void;
+    bezierPoint(a: number, b: number, c: number, d: number, t: number): void;
+    bezierTangent(a: number, b: number, c: number, d: number, t: number): void;
+    curve(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number, x4: number, y4: number): void;
+    curve(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number, x4: number, y4: number, z4: number): void;
+    curveDetail(detail: number): void;
+    curvePoint(a: number, b: number, c: number, d: number, t: number): void;
+    curveTangent(a: number, b: number, c: number, d: number, t: number): void;
+    curveTightness(squishy: number): void;
 
     /*
      * Shape - 3D Primitives
      */
-    box: any;
-    sphere: any;
-    sphereDetail: any;
+    box(size: number): void;
+    box(width: number, height: number, depth: number): void;
+    sphere(radius: number): void;
+    sphereDetail(res: number): void;
+    sphereDetail(ures: number, vres: number): void;
 
     /*
      * Shape - Attributes
      */
-    ellipseMode: any;
-    noSmooth: any;
-    rectMode: any;
-    smooth: any;
-    strokeCap: any;
-    strokeJoin: any;
-    strokeWeight: any;
+    ellipseMode(mode: number): void;
+    noSmooth(): void;
+    rectMode(mode: number): void;
+    smooth(): void;
+    strokeCap(mode: string): void;
+    strokeJoin(mode: string): void;
+    strokeWeight(width: number): void;
 
     /*
      * Shape - Vertex
      */
-    beginShape: any;
-    bezierVertex: any;
-    curveVertex: any;
-    endShape: any;
-    texture: any;
-    textureMode: any;
-    vertex: any;
+    beginShape(mode: number): void;
+    bezierVertex(cx1: number, cy1: number, cx2: number, cy2: number, x: number, y: number): void;
+    bezierVertex(cx1: number, cy1: number, cz1: number, cx2: number, cy2: number, cz2: number, x: number, y: number, z: number): void;
+    curveVertex(x: number, y: number): void;
+    curveVertex(x: number, y: number, z: number): void;
+    endShape(): void;
+    endShape(mode: number): void;
+    texture(img: PImage): void;
+    textureMode(mode: number): void;
+    vertex(x: number, y: number): void;
+    vertex(x: number, y: number, z: number): void;
+    vertex(x: number, y: number, u: number, v: number): void;
+    vertex(x: number, y: number, z: number, u: number, v: number): void;
 
     /*
      * Shape - Loading & Displaying
@@ -836,8 +846,8 @@ declare class Processing implements PConstants {
     mouseMoved: any;
     mouseOut: any;
     mouseOver: any;
+    __mousePressed: any;
     mousePressed: any;
-    //mousePressed: any;
     mouseReleased: any;
     mouseX: any;
     mouseY: any;
@@ -849,8 +859,8 @@ declare class Processing implements PConstants {
      */
     key: any;
     keyCode: any;
+    __keyPressed: any;
     keyPressed: any;
-    //keyPressed: any;
     keyReleased: any;
     keyTyped: any;
 

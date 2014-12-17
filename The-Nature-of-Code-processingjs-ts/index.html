@@ -17,6 +17,8 @@
         //    };
         //}
         function sketchProc(processing) {
+            console.log(processing.__frameRate);
+
             // Override draw function, by default it will be called 60 times per second
             processing.draw = function () {
                 // determine center and max clock arm length

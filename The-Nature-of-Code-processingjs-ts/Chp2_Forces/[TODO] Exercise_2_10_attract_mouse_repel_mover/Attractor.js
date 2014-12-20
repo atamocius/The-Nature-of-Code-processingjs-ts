@@ -1,13 +1,13 @@
 /// <reference path="../../scripts/typings/processing.d.ts" />
 define(["require", "exports"], function (require, exports) {
     var Attractor = (function () {
-        function Attractor($p) {
+        function Attractor($p, g) {
             this.dragging = false; // Is the object being dragged?
             this.rollover = false; // Is the mouse over the ellipse?
             this.$p = $p;
+            this.g = g;
             this.location = new PVector(this.$p.width / 2, this.$p.height / 2);
-            this.mass = 20;
-            this.G = 1;
+            this.mass = 10;
             this.dragOffset = new PVector(0.0, 0.0);
         }
         Attractor.prototype.attract = function (m) {
@@ -22,7 +22,7 @@ define(["require", "exports"], function (require, exports) {
             // we just want this vector for direction)
             force.normalize();
             // Calculate gravitional force magnitude
-            var strength = (this.G * this.mass * m.mass) / (d * d);
+            var strength = (this.g * this.mass * m.mass) / (d * d);
             // Get force vector --> magnitude * direction
             force.mult(strength);
             return force;
@@ -30,7 +30,6 @@ define(["require", "exports"], function (require, exports) {
         // Method to display
         Attractor.prototype.display = function () {
             this.$p.ellipseMode(this.$p.CENTER);
-            this.$p.strokeWeight(4);
             this.$p.stroke(0);
             if (this.dragging) {
                 this.$p.fill(50);
@@ -39,9 +38,9 @@ define(["require", "exports"], function (require, exports) {
                 this.$p.fill(100);
             }
             else {
-                this.$p.fill(175, 200);
+                this.$p.fill(0);
             }
-            this.$p.ellipse(this.location.x, this.location.y, this.mass * 2, this.mass * 2);
+            this.$p.ellipse(this.location.x, this.location.y, this.mass * 6, this.mass * 6);
         };
         // #region mouse interaction
         // The methods below are for mouse interaction

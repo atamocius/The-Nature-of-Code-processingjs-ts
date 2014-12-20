@@ -10,29 +10,31 @@ import Attractor = require('Attractor');
 
 export var sketch = ($p: Processing) => {
 
-    var G: number = 1;
-
-    var m: Mover;
+    var movers: Mover[] = new Array<Mover>(10);
     var a: Attractor;
 
     $p.setup = () => {
         $p.size(640, 360);
-        m = new Mover($p);
+        for (var i: number = 0; i < movers.length; i++) {
+            movers[i] = new Mover($p, $p.random(0.1, 2), $p.random($p.width), $p.random($p.height));
+        }
         a = new Attractor($p);
     };
 
     $p.draw = () => {
         $p.background(255);
 
-        var force: PVector = a.attract(m);
-        m.applyForce(force);
-        m.update();
-
+        a.display();
         a.drag();
         a.hover($p.mouseX, $p.mouseY);
 
-        a.display();
-        m.display();
+        for (var i: number = 0; i < movers.length; i++) {
+            var force: PVector = a.attract(movers[i]);
+            movers[i].applyForce(force);
+
+            movers[i].update();
+            movers[i].display();
+        }
     };
 
     $p.mousePressed = () => {

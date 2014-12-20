@@ -3,44 +3,28 @@
 /* tslint:disable: no-unused-variable */
 /* tslint:disable: comment-format */
 
-import Mover = require('Mover');
-import Attractor = require('Attractor');
-
 'use strict';
 
 export var sketch = ($p: Processing) => {
 
-    var G: number = 1;
-
-    var m: Mover;
-    var a: Attractor;
+    var reset = () => {
+    };
 
     $p.setup = () => {
         $p.size(640, 360);
-        m = new Mover($p);
-        a = new Attractor($p);
+        reset();
     };
 
     $p.draw = () => {
         $p.background(255);
 
-        var force: PVector = a.attract(m);
-        m.applyForce(force);
-        m.update();
 
-        a.drag();
-        a.hover($p.mouseX, $p.mouseY);
-
-        a.display();
-        m.display();
+        $p.fill(0);
+        $p.text('click mouse to reset', 10, 30);
     };
 
     $p.mousePressed = () => {
-        a.clicked($p.mouseX, $p.mouseY);
-    };
-
-    $p.mouseReleased = () => {
-        a.stopDragging();
+        reset();
     };
 };
 

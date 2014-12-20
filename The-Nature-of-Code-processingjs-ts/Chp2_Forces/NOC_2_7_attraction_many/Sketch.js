@@ -2,23 +2,26 @@
 define(["require", "exports", 'Mover', 'Attractor'], function (require, exports, Mover, Attractor) {
     'use strict';
     exports.sketch = function ($p) {
-        var G = 1;
-        var m;
+        var movers = new Array(10);
         var a;
         $p.setup = function () {
             $p.size(640, 360);
-            m = new Mover($p);
+            for (var i = 0; i < movers.length; i++) {
+                movers[i] = new Mover($p, $p.random(0.1, 2), $p.random($p.width), $p.random($p.height));
+            }
             a = new Attractor($p);
         };
         $p.draw = function () {
             $p.background(255);
-            var force = a.attract(m);
-            m.applyForce(force);
-            m.update();
+            a.display();
             a.drag();
             a.hover($p.mouseX, $p.mouseY);
-            a.display();
-            m.display();
+            for (var i = 0; i < movers.length; i++) {
+                var force = a.attract(movers[i]);
+                movers[i].applyForce(force);
+                movers[i].update();
+                movers[i].display();
+            }
         };
         $p.mousePressed = function () {
             a.clicked($p.mouseX, $p.mouseY);

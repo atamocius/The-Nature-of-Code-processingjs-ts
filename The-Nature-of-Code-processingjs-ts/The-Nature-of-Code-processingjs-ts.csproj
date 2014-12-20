@@ -37,9 +37,14 @@
     <Content Include="Chp2_Forces\Exercise_2_1_balloon\index.html" />
     <Content Include="Chp2_Forces\Exercise_2_2_forces_many_edgerepel\index.html" />
     <Content Include="Chp2_Forces\Exercise_2_4_forces_friction_pockets\index.html" />
+    <Content Include="Chp2_Forces\[TODO] Exercise_2_10_attract_mouse_repel_mover\index.html" />
+    <Content Include="Chp2_Forces\NOC_2_8_mutual_attraction\index.html" />
+    <Content Include="Chp2_Forces\NOC_2_7_attraction_many\index.html" />
     <Content Include="Chp2_Forces\NOC_2_6_attraction\index.html" />
     <Content Include="Chp2_Forces\NOC_2_5_fluidresistance_sequence\index.html" />
-    <Content Include="Chp2_Forces\_Exercise_2_7_fluidresistance_lift\index.html" />
+    <Content Include="Chp2_Forces\[TODO] Exercise_2_9_attract_far_repel_near\index.html" />
+    <Content Include="Chp2_Forces\[TODO] Exercise_2_8_attraction_patterns\index.html" />
+    <Content Include="Chp2_Forces\[TODO] Exercise_2_7_fluidresistance_lift\index.html" />
     <Content Include="Chp2_Forces\Exercise_2_6_fluidresistance_surfacearea\index.html" />
     <Content Include="Chp2_Forces\Exercise_2_5_fluidresistance_diffheights\index.html" />
     <Content Include="Chp2_Forces\NOC_2_5_fluidresistance\index.html" />
@@ -140,6 +145,15 @@
     <TypeScriptCompile Include="Chp2_Forces\Exercise_2_4_forces_friction_pockets\Main.ts" />
     <TypeScriptCompile Include="Chp2_Forces\Exercise_2_4_forces_friction_pockets\Mover.ts" />
     <TypeScriptCompile Include="Chp2_Forces\Exercise_2_4_forces_friction_pockets\Sketch.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_10_attract_mouse_repel_mover\Main.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_10_attract_mouse_repel_mover\Sketch.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_8_mutual_attraction\Main.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_8_mutual_attraction\Mover.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_8_mutual_attraction\Sketch.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_7_attraction_many\Attractor.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_7_attraction_many\Main.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_7_attraction_many\Mover.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\NOC_2_7_attraction_many\Sketch.ts" />
     <TypeScriptCompile Include="Chp2_Forces\NOC_2_6_attraction\Attractor.ts" />
     <TypeScriptCompile Include="Chp2_Forces\NOC_2_6_attraction\Main.ts" />
     <TypeScriptCompile Include="Chp2_Forces\NOC_2_6_attraction\Mover.ts" />
@@ -148,8 +162,12 @@
     <TypeScriptCompile Include="Chp2_Forces\NOC_2_5_fluidresistance_sequence\Main.ts" />
     <TypeScriptCompile Include="Chp2_Forces\NOC_2_5_fluidresistance_sequence\Mover.ts" />
     <TypeScriptCompile Include="Chp2_Forces\NOC_2_5_fluidresistance_sequence\Sketch.ts" />
-    <TypeScriptCompile Include="Chp2_Forces\_Exercise_2_7_fluidresistance_lift\Main.ts" />
-    <TypeScriptCompile Include="Chp2_Forces\_Exercise_2_7_fluidresistance_lift\Sketch.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_9_attract_far_repel_near\Main.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_9_attract_far_repel_near\Sketch.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_8_attraction_patterns\Main.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_8_attraction_patterns\Sketch.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_7_fluidresistance_lift\Main.ts" />
+    <TypeScriptCompile Include="Chp2_Forces\[TODO] Exercise_2_7_fluidresistance_lift\Sketch.ts" />
     <TypeScriptCompile Include="Chp2_Forces\Exercise_2_6_fluidresistance_surfacearea\Liquid.ts" />
     <TypeScriptCompile Include="Chp2_Forces\Exercise_2_6_fluidresistance_surfacearea\Main.ts" />
     <TypeScriptCompile Include="Chp2_Forces\Exercise_2_6_fluidresistance_surfacearea\Mover.ts" />
@@ -201,7 +219,9 @@
     <TypeScriptCompile Include="Tests\Test2\Sketch.ts" />
     <TypeScriptCompile Include="Tests\Test1\Sketch.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Chp3_Oscillation\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
